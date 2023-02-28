@@ -88,7 +88,7 @@ for i in range(1000):
 ![image](https://user-images.githubusercontent.com/63588046/221918119-252c2d20-d8ac-4c02-b1fc-9e0956d9b164.png)
 
 
-
+## 수식 
 ![image](https://user-images.githubusercontent.com/63588046/221915886-b1fec45d-94bd-4263-bed6-d6e686f9dbfd.png)
 ![image](https://user-images.githubusercontent.com/63588046/221916632-254cb752-ce32-437e-a23d-e59e0024ba3e.png)
 
