@@ -23,9 +23,31 @@
 
 ### Markov reward process
   * S : state
-  * P : \\p(s'|s) = Pr(S_{t+1} = s'| S_{t} = s) \\   s에서 s'으로 이동할 확률
-  * R : $$r(s) = E[R_{t+1}|S_{t}=s] \$$    state s에서 얻는 reward
+  * P : $p(s'|s) = Pr(S_{t+1} = s'| S_{t} = s)\$   
+      * s에서 s'으로 이동할 확률
+  * R : $r(s) = E[R_{t+1}|S_{t}=s]\$    
+      * state s에서 얻는 reward
   * r : 할인율 
 
+![image](https://user-images.githubusercontent.com/63588046/223590620-6e0fff0d-36bd-4a4c-a996-f548088879d5.png)
+
+
 #### Return
-* $$G_{t} \$$는 시간 t 이후부터 얻을 수 있는 reward의 합
+* $G_{t}\$는 시간 t 이후부터 얻을 수 있는 reward의 합
+* $G_{t} = R_{t+1} + rR_{t+2} + ...=\sum\limits_{k=0}^\infty r^{k}R_{t+k+1}$
+  * Ex. r=0.5, $S_{1}$ = Room1이고 Room1, Room2, Outside로 이동할 경우 
+  * $G_{1} = -1 + (-2) \times 0.5 + 1 \times 0.5^{2}$ 
+
+#### State-value fumction
+* $v(s)$는 state s에서 시작할 때 얻을 수 있는 return의 기댓값
+* $v(s) = E[G_{t}|S_{t} = s]$
+* $v(s) = E[R_{t+1} + rR_{t+2} + ...|S_{t}=s] = E[R_{t+1}+rv(S_{t+1}|S_{t}=s]$
+* $v(s) = R_{t+1}+r\sum\limits_{s' \in S}p(s'|s)v(s')$
+  ![image](https://user-images.githubusercontent.com/63588046/223594422-d6a4451c-fe3c-4ba1-b3da-78dccfb57751.png)
+
+
+### Markov decision process (MDP)
+* Markov reward process + action
+* action : $\Pi(a|s) = Pr(A_{t}=a|S_{t}=s$
+* $p_{\Pi}(s'|s) = \sum\limits_{a\in A}\Pi(a|s)p(s'|s,a)$
+* $r_{\Pi}(s) = \sum\limits_{a\in A}\Pi(a|s)r(s,a)$
