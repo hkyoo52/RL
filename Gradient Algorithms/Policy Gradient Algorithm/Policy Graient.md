@@ -8,7 +8,7 @@ https://talkingaboutme.tistory.com/entry/RL-Policy-Gradient-Algorithms
 $$J(\theta) = \sum_{s\in S} d^{\pi}(s) V^{\pi}(s) = \sum_{s\in S} d^{\pi} \sum_{a \in A} \pi_{\theta}(a|s)Q^{\pi}(s,a)$$
 
 * $d^{\pi}(s) : lim_{t \rightarrow \infty}P(s_{t}=s|s_{0},\pi_{\theta})$
-  * $\pi_{\theta}$로 움직일때 마지막 state에서의 확률분
+  * $\pi_{\theta}$로 움직일때 마지막 state에서의 확률분포
 
 $$\mathbf{\nabla}_{\theta} J(\theta) = \sum_{s\in S} d^{\pi} \sum_{a \in A}Q^{\pi}(s,a)\mathbf{\nabla}_{\theta} \pi_{\theta}(a|s)$$
 * d,Q는 $\theta$에 관한 함수 X
