@@ -2,7 +2,10 @@
 * model free 방식
 * raw experience를 통해 learning
 * 한 episode 끝난 후에 얻은 return 값으로 각 state에서 얻은 reward를 시간에따라 discount하는 방식
- * $V(S_{t}) \leftarrow V(S_{t}) + a(G_{t}-V(S_{t}))$
+  * $V(S_{t}) \leftarrow V(S_{t}) + a(G_{t}-V(S_{t}))$
+  * $G_{t} =R_{t+1}+\gamma R_{t+2}+\gamma^{2} R_{t+3}+...$
+  * $=R_{t+1}+\gamma (R_{t+2}+\gamma R_{t+3}+...)$
+  * $=R_{t+1} + \gamma G_{t+1}$
 * 실제 세계에서는 episode의 끝이 무한대에 가깝게 기므로 한 episode가 끝나야 값을 얻는 방식은 한계가 있음
 
 ## TD Method (temporal difference)
