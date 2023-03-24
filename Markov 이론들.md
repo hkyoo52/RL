@@ -3,7 +3,7 @@
 
 ### Markov Chain (=Markov process)
 * 확률 프로세스 : 확률 분포를 가진 랜덤 변수(random variable)가 일정한 시간 간격(time interval)으로 값을 발생시키는 것을 모델링
-* Markov Chani : 현재의 상태가 오로지 이전 상태에만 영향을 받는 확률 프로세스
+* Markov Chain : 현재의 상태가 오로지 이전 상태에만 영향을 받는 확률 프로세스
   * X : 상태공간의 집합
   * P : 전이 확률, 
 
