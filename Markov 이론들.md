@@ -48,6 +48,6 @@
 
 ### Markov decision process (MDP)
 * Markov reward process + action
-* action : $\Pi(a|s) = Pr(A_{t}=a|S_{t}=s$
+* action : $\Pi(a|s) = Pr(A_{t}=a|S_{t}=s)$
 * $p_{\Pi}(s'|s) = \sum\limits_{a\in A}\Pi(a|s)p(s'|s,a)$
 * $r_{\Pi}(s) = \sum\limits_{a\in A}\Pi(a|s)r(s,a)$
